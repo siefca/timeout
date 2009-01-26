@@ -1,0 +1,97 @@
+.TH trifle-tools 1 "January, 15, 2000" "timeout"
+.SH NAME
+timeout \-  execute a command with specified tiemout
+.SH SYNOPSIS
+.hy 0
+.na
+.TP
+.B timeout
+[
+.B -b
+.I time
+]
+[
+.B -c
+.I code
+]
+[
+.B -e
+]
+[
+.B -i
+]
+[
+.B -k
+.I time
+]
+[
+.B -m
+]
+[
+.B -r
+.I code
+]
+[
+.B -s
+.I signal
+]
+[
+.B -v
+]
+[
+.B -x
+]
+[
+.B -z
+]
+[
+.B -A
+.I msg
+]
+[
+.B -B
+.I msg
+]
+[
+.B -C
+.I msg
+]
+[
+.B -D
+.I msg
+]
+[
+.B -E
+.I msg
+]
+[
+.B -F
+.I msg
+]
+.I timeout
+.I command
+.TP
+.B timeout
+[
+.B -V
+]
+[
+.B -h
+]
+.ad b
+.hy 1
+.SH DESCRIPTION
+.LP
+.B Timeout
+is a 
+.SH OPTIONS
+Options are compatible with basic options of suid ping.
+\..PD 0
+.TP
+.I -d delay
+second, minimum - 1 second)
+.TP
+.I -t timeout
+How long should we wai
+.SH AUTHOR
+Pawel Wilk <siefca@pld.org.pl>

@@ -1,0 +1,85 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT()
+
+PACKAGE=timeout
+VERSION=0.2.0
+ALL_LINGUAS="pl"
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+
+AM_MAINTAINER_MODE
+AM_ACLOCAL_INCLUDE(macros)
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_ISC_POSIX
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+
+dnl Checks for libraries.
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS(fcntl.h limits.h malloc.h strings.h sys/time.h unistd.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+AC_DECL_SYS_SIGLIST
+AC_HEADER_TIME
+
+dnl Checks for library functions.
+AC_FUNC_ALLOCA
+AC_FUNC_MMAP
+AC_TYPE_SIGNAL
+AC_CHECK_FUNCS(getcwd getwd putenv strdup gettimeofday socket getopt snprintf sigblock)
+
+AM_CONDITIONAL(HAVE_SNPRINTF,test "x$ac_cv_func_snprintf" = "xyes")
+AC_CHECK_FUNC(sigblock,,AC_CHECK_LIB(bsd, sigblock))
+if test "x$ac_cv_lib_bsd_sigblock" = "xyes" -o \
+	"x$ac_cv_func_sigblock" = "xyes" ; then
+	AC_DEFINE(HAVE_SIGBLOCK)
+fi
+AM_CONDITIONAL(HAVE_SIGBLOCK,test "x$ac_cv_lib_bsd_sigblock" = "xyes" -o \
+        "x$ac_cv_func_sigblock" = "xyes" )
+
+dnl i18n stuff
+AM_GNU_GETTEXT
+dnl TVM:
+dnl horrible *temporary* hack to make sure that if we found gettext() in
+dnl -lintl that we add -lintl *back* to $LIBS.
+dnl
+if test X$gt_cv_func_gettext_libintl = Xyes ; then
+    LIBS="-lintl $LIBS"
+fi
+
+dnl Specify locale stuff destination
+AC_ARG_WITH(localedir,
+	[  --with-localedir=PATH      specify where the locale stuff should go ])
+if test "x$LOCALEDIR" = "x"; then
+	if test "x$with_localedir" != "x"; then
+		LOCALEDIR=$with_localedir
+	else
+		LOCALEDIR='$(prefix)/share/locale'
+	fi
+fi
+
+CPPFLAGS="$CPPFLAGS -O3 -Wall -DLOCALEDIR=\\\"${LOCALEDIR}\\\""
+
+MANDIR="`eval MANDIR=$mandir;echo $MANDIR|sed -e \"s#NONE#$ac_default_prefix#\"`"
+AC_DEFINE_UNQUOTED(VERSION,"$VERSION")
+AC_DEFINE_UNQUOTED(PACKAGE,"$PACKAGE")
+dnl AC_DEFINE_UNQUOTED(LOCALEDIR,"$LOCALDIR")
+
+dnl export variables
+AC_SUBST(EXTRA_SOURCES)
+AC_SUBST(MANDIR)
+
+dnl generate files dependig current configuration
+AM_CONFIG_HEADER(config.h)
+AC_OUTPUT([Makefile macros/Makefile doc/Makefile intl/Makefile 
+	   src/Makefile src/signames.h doc/timeout.1 po/Makefile.in])

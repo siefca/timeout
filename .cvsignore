@@ -1,0 +1,9 @@
+Makefile
+Makefile.in
+*~
+*.bak
+timeout
+signames.h
+.deps
+*.o
+*.cache

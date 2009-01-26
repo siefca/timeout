@@ -1,0 +1,38 @@
+Summary:	
+Summary(pl):	Przeró¿ne programy narzêdziowe
+Name:		timeout
+Version:	0.2.0
+Release:	1
+Group:		Utilities/System
+Group(pl):	Narzêdzia/System
+Copyright:	GPL
+Vendor:		Pawel Wilk <siefca@entropy.echelon.pl>
+Source:		ftp://dione.ids.pl/people/siewca/open_source/%{name}-%{version}.tar.gz
+BuildRoot:   	/tmp/%{name}-%{version}-root
+
+%define		_mandir		%(if [ "%{_target_vendor}" == "pld" ]; then echo "%{_prefix}/share/man"; else echo "%{_prefix}/share/man"; fi) 
+
+%description
+Timeout is a tool for managing timeout of called child process.
+You can set timeout values for process to exit, after which
+various signals may be sent to the secified process.
+Optionally you can tell the tool to print messages,
+when some action is to be taken.
+
+%description -l pl
+Timeout jest narzêdziem, które s³u¿y do zarz±dzania czasem bezczynno¶ci
+wywo³anych procesów potomnych. Mo¿esz ustawiæ warto¶æ czasu
+oczekiwania na zakoñczenie procesu, po którego osi±gniêciu do
+tego procesu mog± byæ dostarczone ró¿ne podane sygna³y. Opcjonalnie
+mo¿esz w³±czyæ wy¶wietlanie komunikatów, gdy program podejmuje pewne
+dzia³ania.
+
+%prep
+%setup -q -n %{name}
+
+%build
+%configure \
+	--without-included-gettext 
+
+%{__make} CC="gcc %{rpmcflags} -Wall"
+

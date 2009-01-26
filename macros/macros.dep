@@ -1,0 +1,1 @@
+$(top_srcdir)/aclocal.m4: macros/aclocal-include.m4 macros/codeset.m4 macros/compiler-flags.m4 macros/curses.m4 macros/gettext.m4 macros/glibc21.m4 macros/iconv.m4 macros/isc-posix.m4 macros/lcmessage.m4 macros/progtest.m4 macros/readline.m4

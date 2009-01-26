@@ -1,0 +1,441 @@
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: trifle-tools 0.0.2\n"
+"POT-Creation-Date: 2000-01-24 02:01+0100\n"
+"PO-Revision-Date: 1999-12-25 00:04+0100\n"
+"Last-Translator: Pawel Wilk <siefca@pld.org.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: plaintext\n"
+
+#: timeout/timeout.c:113
+msgid "timeout: you have to specify timeout value and a command to execute!\n"
+msgstr "timeout: musisz podaæ warto¶æ czasu i komendê do wykonania!\n"
+
+#: timeout/timeout.c:124
+#, c-format
+msgid ""
+"timeout:  command to invoke is: %s\n"
+"timeout:  timeout is set to %d seconds\n"
+"timeout:  exit code after timeout is set to %d\n"
+"timeout:  signal is set to %d (%s)\n"
+msgstr ""
+"timeout:  wykonam komendê: %s\n"
+"timeout:  czas oczekiwania ustawiony na %d sekund\n"
+"timeout:  kod wyj¶cia po czasie oczekiwania to %d\n"
+"timeout:  sygna³ wysy³any do niezakoñczonego procesu: %d (%s)\n"
+
+#: timeout/timeout.c:131
+#, c-format
+msgid ""
+"timeout:  KILL signal will be delivered %d seconds after timeout.\n"
+"timeout:  return code after KILL is set to %d\n"
+msgstr ""
+"timeout:  sygna³ KILL bêdzie dostarczony %d sekund po wcze¶niejszym "
+"sygnale.\n"
+"timeout:  kod powrotu po KILL ustawiony na %d\n"
+
+#: timeout/timeout.c:135
+msgid ""
+"timeout:  return code of successfuly finished proccess will be always 0\n"
+msgstr "timeout:  kod powrotu pomy¶lnie zakoñczonego procesu bêdzie zawsze 0\n"
+
+#: timeout/timeout.c:163
+#, c-format
+msgid ""
+"Usage: %s [options] timeout command\n"
+"\n"
+"-b time   tells timeout to sleep the given number of seconds just before "
+"exit\n"
+"-c code   sets exit code after KILL signal (only in combination with -k)\n"
+"-e        tells timeout to wait for any of -D -E -F commands before exit\n"
+"-i        tells timeout to not handle Hangup signal (to avoid timer "
+"refresh)\n"
+"-k time   sends the KILL signal after the given number of seconds after "
+"timeout\n"
+"-m        returns always 0 if process had exited before timeout\n"
+"-r code   sets return code after timeout\n"
+"-s signal sets name or number of signal to send on timeout\n"
+"-v        enables verbose mode\n"
+"-x        enables signal code returning instead of exit code\n"
+"-z        disables sending signals to all processes in a group\n"
+"-A msg    this message will be displayed when timeout arrive\n"
+"-B msg    this message will be displayed when (if) KILL arrive\n"
+"-C msg    this message will be displayed if process has exited before "
+"timeout\n"
+"-D -E -F is the same as -A -B -C but invokes a COMMAND\n"
+"\n"
+"Additional options:\n"
+"-V        prints version and exits\n"
+"-l        lists available signal names and exits\n"
+"-h        this help message\n"
+"\n"
+msgstr ""
+"U¿ycie: %s [opcje] czas komenda\n"
+"\n"
+"-b czas   ka¿e programowi timeout usn±æ podan± ilo¶æ sekund przed wyj¶ciem\n"
+"-c kod    ustawia kod wyj¶cia po wys³aniu KILL (w po³±czeniu z -k)\n"
+"-e        czeka na zakoñczenie komend -D -E -F przed wyj¶ciem\n"
+"-i        nie obs³uguje sygna³u zawieszenia (zapobiega od¶wie¿aniu zegara)\n"
+"-k czas   wysy³a sygna³ KILL po podanej liczbie sekund od ostatniego "
+"odliczania\n"
+"-m        zwraca zawsze 0 je¶li proces zakoñczy³ siê przed czasem "
+"oczekiwania\n"
+"-r kod    ustawia kod wyj¶cia po up³yniêciu czasu oczekiwania\n"
+"-s sygna³ ustawia nazwê lub numer sygna³u dostarczanego po podanym czasie\n"
+"-v        w³±cza krzykliwy tryb\n"
+"-x        w³±cza zwracanie kodu sygna³u zamiast zwracania kodu wyj¶cia "
+"potomka\n"
+"-z        wy³±cza wysy³anie sygna³ów do wszystkich procesów w grupie "
+"potomka\n"
+"-A txt    wiadomo¶æ ta bêdzie pokazana gdy up³ynie czas oczekiwania\n"
+"-B txt    wiadomo¶æ ta bêdzie pokazana gdy (je¶li) nadejdzie KILL\n"
+"-C txt    wiadomo¶æ ta bêdzie pokazana je¶li proces zakoñczy³ siê "
+"samodzielnie\n"
+"-D -E -F robi to samo co -A -B -C ale wykonuje podan± KOMENDÊ\n"
+"\n"
+"Opcje dodatkowe:\n"
+"-V        drukuje wersjê i wychodzi\n"
+"-l        wy¶wietla dostêpne nazwy sygna³ów i wychodzi\n"
+"-h        ta wiadomo¶æ\n"
+"\n"
+
+#: timeout/timeout.c:194
+msgid "timeout: something is wrong.. null pointer at code_name argument!\n"
+msgstr ""
+"timeout: co¶ jest nie tak.. zerowy wska¼nik przy argumencie code_name!\n"
+
+#: timeout/timeout.c:202
+msgid "timeout: invaild return code (digit expected).\n"
+msgstr "timeout: b³êdna warto¶æ kodu powrotu (oczekiwana liczba).\n"
+
+#: timeout/timeout.c:212
+msgid "timeout: invaild return code value (try 0 to 255).\n"
+msgstr "timeout: b³êdna warto¶æ kodu powrotu (spróbuj 0 to 255).\n"
+
+#: timeout/timeout.c:228
+msgid "timeout: something is wrong.. null pointer at time_valuee argument!\n"
+msgstr "timeout: co¶ jest nie tak.. zerowy wska¼nik w argumencie time_value!\n"
+
+#: timeout/timeout.c:236
+msgid "timeout: invaild time value - only digits are supported.\n"
+msgstr "timeout: niew³a¶ciwa warto¶æ czasu - podawaj tylko liczby.\n"
+
+#: timeout/timeout.c:246
+msgid "timeout: invaild time value - (try 0 to 65536)\n"
+msgstr "timeout: niew³a¶ciwa warto¶æ czasu - (spróbuj 0 do 65536)\n"
+
+#: timeout/signals.c:46
+#, c-format
+msgid "timeout: killing process %s [%d]\n"
+msgstr "timeout: zabijam proces %s [%d]\n"
+
+#. signaling
+#: timeout/signals.c:58
+#, c-format
+msgid ""
+"timeout: timeout for process %s [%d]\n"
+"timeout: sending signal: %s (%d).\n"
+msgstr ""
+"timeout: koniec czekania na proces %s [%d]\n"
+"timeout: wysy³am sygna³: %s (%d).\n"
+
+#: timeout/signals.c:92
+#, c-format
+msgid "timeout: execution of child process finished before %s"
+msgstr "timeout: wykonywanie procesu potomnego zakoñczone przed %s"
+
+#: timeout/signals.c:93
+msgid "kill.\n"
+msgstr "jego zabiciem.\n"
+
+#: timeout/signals.c:93
+msgid "timeout.\n"
+msgstr "czasem.\n"
+
+#. already done... i know, i'm paranoid :>
+#: timeout/signals.c:130
+msgid "timeout: refresh requested... "
+msgstr "za¿±dano od¶wie¿enia..."
+
+#: timeout/signals.c:134
+#, c-format
+msgid "reset to %d seconds\n"
+msgstr "ustawiam na %d sekund\n"
+
+#: timeout/signals.c:136
+msgid "but cannot be preproccessed (killing state)\n"
+msgstr "lecz nie mo¿e byæ przetworzone (stan ubijania)\n"
+
+#: timeout/signals.c:206
+msgid "timeout: something is wrong.. null pointer at signal_name argument!\n"
+msgstr ""
+"timeout: co¶ jest nie tak.. zerowy wska¼nik przy argumencie signal_name!\n"
+
+#: timeout/signals.c:217
+msgid "timeout: invaild signal specifier (SIGNAME or value requested)\n"
+msgstr ""
+"timeout: niew³a¶ciwy specyfikator sygna³u (¿±dana SYGNAZWA lub warto¶æ)\n"
+
+#: timeout/signals.c:232
+msgid "timeout: invaild signal name, type -l to get list.\n"
+msgstr "timeout: niew³a¶ciwa nazwa sygna³u, zastosuj -l by otrzymaæ listê.\n"
+
+#: timeout/signals.c:239
+msgid "timeout: invaild signal specifier (digit expected).\n"
+msgstr "timeout: niew³a¶ciwy specyfikator sygna³u (oczekiwano liczby).\n"
+
+#: timeout/signals.c:280
+msgid "timeout: waiting for additional processes to finish...\n"
+msgstr "timeout: oczekujê na zakoñczenie dodatkowych procesów...\n"
+
+#: timeout/signals.c:288
+#, c-format
+msgid "timeout: [%d] - finished\n"
+msgstr "timeout: [%d] - zakoñczony\n"
+
+#: timeout/signals.c:293
+msgid "timeout: exiting...\n"
+msgstr "timeout: wychodzê...\n"
+
+#: timeout/invokes.c:28
+#, c-format
+msgid "timeout: calling command: %s\n"
+msgstr "timeout: wo³am komendê: %s\n"
+
+#: poink/poink.c:49
+msgid "  usage: ping [ -i delay ] [ -c count ] [ -t timeout] host\n"
+msgstr ""
+"  u¿ycie: ping [ -i opó¼nienie ] [ -c ilo¶æ ] [ -t bezczynno¶æ ] host\n"
+
+#: poink/poink.c:58
+#, c-format
+msgid ""
+"\n"
+"-- %s ping statistics --\n"
+msgstr ""
+"\n"
+"-- %s statystyki ping --\n"
+
+#: poink/poink.c:59
+msgid "%d packet(s) transmitted, %d packet(s) received, %d%% packets lost.\n"
+msgstr "na %d transmitowanych pakietów, %d odebrano, %d%% stracono.\n"
+
+#: poink/poink.c:60
+msgid "round-trip statistics min/avg/max: "
+msgstr "statystyki wêdrówki min/¶r./max: "
+
+#: poink/poink.c:63
+#, c-format
+msgid " (%d/%d/%d usecs)"
+msgstr " (%d/%d/%d mikrosekund)"
+
+#: poink/poink.c:65
+msgid "(not available due to 100%% packets lost).\n"
+msgstr "(niedostêpny z powodu 100%% utraty pakietów).\n"
+
+#: poink/poink.c:80
+msgid "ping: invalid number of pings.\n"
+msgstr "ping: niew³a¶ciwa liczba pingów.\n"
+
+#: poink/poink.c:84
+msgid "ping: invalid ping delay.\n"
+msgstr "ping: niew³a¶ciwe opó¼nienie.\n"
+
+#: poink/poink.c:88
+msgid "ping: invalid ping timeout.\n"
+msgstr "ping: niew³a¶ciwy czas bezczynno¶ci.\n"
+
+#: poink/poink.c:101
+msgid "ping: host not found.\n"
+msgstr "ping: nie znaleziono hosta.\n"
+
+#: poink/poink.c:115
+#, c-format
+msgid "Pinging %s (%s) - %d packets, delay %d sec(s), timeout %d sec(s).\n"
+msgstr ""
+"Pingujê %s (%s) - %d pakietów, opó¼nienie %d sek., bezczynno¶æ %d sek.\n"
+
+#: poink/poink.c:117
+#, c-format
+msgid "Pinging %s (%s) - delay %d sec(s), timeout %d sec(s).\n"
+msgstr "Pingujê %s (%s) - opó¼nienie %d sek., bezczynno¶æ %d sek.\n"
+
+#: poink/poink.c:130
+#, c-format
+msgid "No ping reply from %s within %d second(s)...\n"
+msgstr "Brak odpowiedzi ping od %s przez %d sekund...\n"
+
+#: poink/poink.c:136
+#, c-format
+msgid "Ping reply from %s: seq=%d, time=%.1f ms%s\n"
+msgstr "Odpowied¼ ping od %s: seq=%d, czas=%.1f ms%s\n"
+
+#: poink/poink.c:136 poink/poink.c:137
+msgid " (skew!)"
+msgstr " (kurna!)"
+
+#: poink/poink.c:137
+#, c-format
+msgid "Ping reply from %s: seq=%d, time<0.1 ms (%d usecs)%s\n"
+msgstr "Odpowied¼ ping od %s: seq=%d, czas<0.1 ms (%d mikrosekund)%s\n"
+
+#
+#: spawn/signals.c:85 spawn/signals.c:126
+msgid "spawn: timeout!\n"
+msgstr "spawn: koniec czasu!\n"
+
+#
+#: spawn/signals.c:94
+msgid "spawn: looking for children...\n"
+msgstr "spawn: szukam dzieciaków...\n"
+
+#
+#: spawn/signals.c:100 spawn/signals.c:118
+msgid "spawn: exiting...\n"
+msgstr "spawn: wychodzê...\n"
+
+#: spawn/signals.c:151
+#, c-format
+msgid "spawn: got CHLD signal from [%d]\n"
+msgstr "spawn: mam sygna³ CHLD od [%d]\n"
+
+#
+#: spawn/signals.c:154
+msgid "spawn: got positive lookup for this PID\n"
+msgstr "spawn: mam pozytywne potwierdzenie dla tego PID\n"
+
+#: spawn/invokes.c:24
+msgid "spawn: not enough free entries in PID-table\n"
+msgstr "spawn: zbyt ma³o wolnych miejsc w tabeli PID\n"
+
+#: spawn/invokes.c:37
+#, c-format
+msgid "spawn: calling command: %s (%d/INFINITY)\n"
+msgstr "spawn: wo³am komendê: %s (%d/NIESKOÑCZONO¦Æ)\n"
+
+#: spawn/invokes.c:39
+#, c-format
+msgid "spawn: calling command: %s (%d/%d)\n"
+msgstr "spawn: wo³am komendê: %s (%d/%d)\n"
+
+#: spawn/invokes.c:122
+#, c-format
+msgid "spawn: [%d] forking...\n"
+msgstr "spawn [%d] rozwidlam siê...\n"
+
+#. good bye!
+#: spawn/invokes.c:130
+#, c-format
+msgid "spawn: [%d] rebirthing!\n"
+msgstr "spawn: [%d] odradzam siê!\n"
+
+#: spawn/spawn.c:88
+msgid ""
+"spawn: CPR mode enabled\n"
+"       exit code cannot be resolved due to alternate scanning method\n"
+msgstr ""
+"spawn: w³±czony tryb reanimacji\n"
+"       kod wyj¶cia nie mo¿e byæ uzyskany, gdy¿ u¿yto alternatywnej metody "
+"skanowania\n"
+
+# c-format
+#: spawn/spawn.c:114
+#, fuzzy, c-format
+msgid ""
+"Usage: %s [options] command\n"
+"\n"
+"-e code   stop respawning if exit code is equal to code\n"
+"-c count  stop invoking command after specified number of retries\n"
+"-f time   do forking after given time in seconds\n"
+"-g        change PGID after each fork\n"
+"-n        ignore Hang-Up signal\n"
+"-v        enables verbose mode\n"
+"-s        increases verbosity\n"
+"-x        proccess's tracing and CPR-ing mode\n"
+"-z        returns always zero instead of code of invoked command\n"
+"\n"
+"Additional options:\n"
+"-B        buster-mode\n"
+"-V        prints version and exits\n"
+"-h        this help message\n"
+"\n"
+msgstr ""
+"U¿ycie: %s [opcje] komenda\n"
+"-e kod    przestañ namna¿aæ je¶li kod wyj¶cia jest równy podanemu\n"
+"-c liczba przestañ wo³aæ komendê po okre¶lonej liczbie powtórzeñ\n"
+"-f czas   wykonuj rozwidlanie (fork) co podan± liczbê sekund\n"
+"-g        zmieniaj PGID po ka¿dym fork\n"
+"-n        ignoruj sygna³ zawieszenia\n"
+"-v        w³±cza krzykliwy tryb\n"
+"-s        zwiêksza krzykliwo¶æ\n"
+"-x        tryb ¶ledzenia i reanimacji procesów\n"
+"-z        zwraca zawsze zero zamiast kodu wyj¶cia wo³anej komendy\n"
+"\n"
+"Opcje dodatkowe:\n"
+"-V        wy¶wietla wersjê i wychodzi\n"
+"-h        wy¶wietla tê wiadomo¶æ\n"
+"\n"
+
+#
+#: spawn/spawn.c:139
+msgid "spawn: something is wrong.. null pointer at code_name argument!\n"
+msgstr "spawn: co¶ jest nie tak.. zerowy wska¼nik przy argumencie code_name!\n"
+
+#
+#: spawn/spawn.c:147
+msgid "spawn: invaild return code (digit expected).\n"
+msgstr "spawn: b³êdna warto¶æ kodu powrotu (oczekiwana liczba).\n"
+
+#
+#: spawn/spawn.c:157
+msgid "spawn: invaild return code value (try 0 to 255).\n"
+msgstr "spawn: b³êdna warto¶æ kodu powrotu (spróbuj 0 to 255).\n"
+
+#
+#: spawn/spawn.c:173
+msgid "spawn: something is wrong.. null pointer at time_valuee argument!\n"
+msgstr "spawn: co¶ jest nie tak.. zerowy wska¼nik w argumencie time_value!\n"
+
+#
+#: spawn/spawn.c:181
+msgid "spawn: invaild time value - only digits are supported.\n"
+msgstr "spawn: niew³a¶ciwa warto¶æ czasu - podawaj tylko liczby.\n"
+
+#
+#: spawn/spawn.c:191
+msgid "spawn: invaild time value - (try 0 to 65536)\n"
+msgstr "spawn: niew³a¶ciwa warto¶æ czasu - (spróbuj 0 do 65536)\n"
+
+#
+#: spawn/spawn.c:207
+msgid "spawn: something is wrong.. null pointer at retries_valuee argument!\n"
+msgstr ""
+"spawn: co¶ jest nie tak.. zerowy wska¼nik w argumencie retries_value!\n"
+
+#
+#: spawn/spawn.c:215
+msgid "spawn: invaild retries value - only digits are supported.\n"
+msgstr "spawn: niew³a¶ciwa warto¶æ czasu - podawaj tylko liczby.\n"
+
+#
+#: spawn/spawn.c:225
+msgid "spawn: invaild retries value - (try 0 to 32000)\n"
+msgstr "spawn: niew³a¶ciwa warto¶æ czasu - (spróbuj 0 do 32000)\n"
+
+#~ msgid "timeout"
+#~ msgstr "timeout"
+
+#~ msgid ".\n"
+#~ msgstr ".\n"
+
+#~ msgid "%d.%d.%d.%d"
+#~ msgstr "%d.%d.%d.%d"
+
+#~ msgid "ping"
+#~ msgstr "ping"
